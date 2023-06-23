@@ -68,9 +68,9 @@ def coro(runtime, cfg, inputs, state, outputs):  # pylint: disable=W0613
                     question                  = ' '.join(cmd['args'])
                     outputs['msg']['ena']     = True
                     outputs['msg']['list'][:] = [
-                                        (1115744295845118032, question),
-                                        (1115744329131106325, question),
-                                        (1115744378623893675, question),
-                                        (1115744396005097592, question),
-                                        (1115744413751185570, question)]
+                                        (1121445941648564304, question),
+                                        (1121446047751868546, question),
+                                        (1121446077426581505, question),
+                                        (1121446099333431396, question),
+                                        (1121446121986867340, question)]
 

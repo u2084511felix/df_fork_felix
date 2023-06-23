@@ -99,21 +99,24 @@ def coro(runtime, cfg, inputs, state, outputs):  # pylint: disable=W0613
 
                     str_transcript += '\n'
 
-                    str_prompt = """Please provide a summary for the given transcript.
+                    str_prompt = """Provide a summary for the given transcript from a deliberation session. 
+                    Start the summary with the topic of the deliberation session. 
+                    Then provide a list of the key arguments and points that have been raised. 
+                    Next to each point rasied name the person who raised it, and those who support it.
+                    """
 
-                    Make sure that the summary highlights the main different points of view
-                    that have been expressed and the main arguments that have been put forward
-                    and suggests potential consensus solutions.
-
+                    usr_prompt = f"""
                     {str_transcript}
-
                     """.format(str_transcript = str_transcript)
 
                     list_request.append({
-                        'model':       'gpt-3.5-turbo',
+                        'model':       'gpt-4',
                         'messages':    [{
                             'role':    'system',
-                            'content': str_prompt}]})
+                            'content': str_prompt},
+                            {
+                            'role':    'user',
+                            'content': usr_prompt}]})
 
         if list_request:
             outputs['request']['ena'] = True

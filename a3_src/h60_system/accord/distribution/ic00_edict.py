@@ -54,12 +54,12 @@ def coro(runtime, cfg, inputs, state, outputs):  # pylint: disable=W0613
 
     """
 
-    id_channel_admin     = 1115744080907997204
-    id_channel_room_01   = 1115744295845118032
-    id_channel_room_02   = 1115744329131106325
-    id_channel_room_03   = 1115744378623893675
-    id_channel_room_04   = 1115744396005097592
-    id_channel_room_05   = 1115744413751185570
+    id_channel_admin     = 1121440401417584700 #1115744080907997204
+    id_channel_room_01   = 1121445941648564304 #1115744295845118032
+    id_channel_room_02   = 1121446047751868546 #1115744329131106325
+    id_channel_room_03   = 1121446077426581505 #1115744378623893675
+    id_channel_room_04   = 1121446099333431396 #1115744396005097592
+    id_channel_room_05   = 1121446121986867340 #1115744413751185570
     set_channel_broacast = { id_channel_admin,
                              id_channel_room_01,
                              id_channel_room_02,
